@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/itmLightMode"
+        android:title="@string/light_mode"
+        android:checkable="true"
+        android:checked="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/itmDarkMode"
+        android:title="@string/dark_mode"
+        android:checkable="true"
+        android:checked="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/itmAutoMode"
+        android:title="@string/auto_dark_mode"
+        android:checkable="true"
+        android:checked="false"
+        app:showAsAction="never" />
+
+</menu>

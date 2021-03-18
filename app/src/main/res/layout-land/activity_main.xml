@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgQuiz"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@id/lblQuiz"
+        app:layout_constraintEnd_toStartOf="@+id/quizGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/quiz"
+        android:contentDescription="@string/practice_icon" />
+
+    <TextView
+        android:id="@+id/lblQuiz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="@string/practice"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/quizGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgQuiz" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/quizGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <ImageView
+        android:id="@+id/imgCalculator"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@id/lblCalculator"
+        app:layout_constraintEnd_toStartOf="@+id/calcGuideline"
+        app:layout_constraintStart_toEndOf="@+id/imgQuiz"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calc"
+        android:contentDescription="@string/calculus_icon" />
+
+    <TextView
+        android:id="@+id/lblCalculator"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="@string/calculus"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/calcGuideline"
+        app:layout_constraintStart_toStartOf="@+id/quizGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/imgCalculator" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/calcGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <ImageView
+        android:id="@+id/imgMeasure"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@id/lblMeasure"
+        app:layout_constraintEnd_toStartOf="@+id/measureGuideline"
+        app:layout_constraintStart_toStartOf="@+id/calcGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/measuring"
+        android:contentDescription="@string/measuring_icon" />
+
+    <TextView
+        android:id="@+id/lblMeasure"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="@string/measure_height"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/measureGuideline"
+        app:layout_constraintStart_toStartOf="@+id/calcGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/imgMeasure" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/measureGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.99" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

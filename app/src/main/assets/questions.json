@@ -1,0 +1,20 @@
+{
+  "questions": [
+    {
+      "question": "find the slope of function (sin(x))^(cos(x)) in point π/2.",
+      "answers": ["0", "1", "sqrt(2)/2", "-sqrt(3)/2", "-1/2"]
+    },
+    {
+      "question": "Using determinant formula, calculate an area of the triangle ABC, where A=(3,2), B=(4,5), C=(-2,3)",
+      "answers": ["8", "16", "10", "7.5", "5"]
+    },
+    {
+      "question": "Calculate area under the function sin(x)/x from 0 to infinity",
+      "answers": ["π/2", "π", "π²/6", "e^π", "π^e"]
+    },
+    {
+      "question": "What is an expected distance between two points randomly allocated in the unit square",
+      "answers": ["(2+sqrt(2)+5*ln(sqrt(2)+1))/15", "(sqrt(2)+2*ln(sqrt(2)+1))/2", "(sqrt(2)+5*ln(sqrt(2)))/sqrt(5)", "(1+sqrt(2)+5*ln(sqrt(2)))/sqrt(6)", "(sqrt(2+1))/2"]
+    }
+  ]
+}

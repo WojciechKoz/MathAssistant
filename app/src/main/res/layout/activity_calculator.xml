@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity">
+
+    <EditText
+        android:id="@+id/txtInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/btnSin"
+        style="@style/NaNButton"
+        android:text="@string/sin"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnAsin"
+        app:layout_constraintEnd_toStartOf="@+id/btnCos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <Button
+        android:id="@+id/btnCos"
+        style="@style/NaNButton"
+        android:text="@string/cos"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnAcos"
+        app:layout_constraintEnd_toStartOf="@+id/btnTan"
+        app:layout_constraintStart_toEndOf="@+id/btnSin"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <Button
+        android:id="@+id/btnTan"
+        style="@style/NaNButton"
+        android:text="@string/tan"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnAtan"
+        app:layout_constraintEnd_toStartOf="@+id/btnLog"
+        app:layout_constraintStart_toEndOf="@+id/btnCos"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <Button
+        android:id="@+id/btnLog"
+        style="@style/NaNButton"
+        android:text="@string/log"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnExp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnTan"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <Button
+        android:id="@+id/btnAsin"
+        style="@style/NaNButton"
+        android:text="@string/asin"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn7"
+        app:layout_constraintEnd_toStartOf="@+id/btnAcos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSin" />
+
+    <Button
+        android:id="@+id/btn9"
+        style="@style/NumberButton"
+        android:text="@string/nine"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn6"
+        app:layout_constraintEnd_toStartOf="@+id/btnBackspace"
+        app:layout_constraintStart_toEndOf="@+id/btn8"
+        app:layout_constraintTop_toBottomOf="@+id/btnAtan" />
+
+    <Button
+        android:id="@+id/btn6"
+        style="@style/NumberButton"
+        android:text="@string/six"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn3"
+        app:layout_constraintEnd_toStartOf="@+id/btnDiv"
+        app:layout_constraintStart_toEndOf="@+id/btn5"
+        app:layout_constraintTop_toBottomOf="@+id/btn9" />
+
+    <Button
+        android:id="@+id/btn3"
+        style="@style/NumberButton"
+        android:text="@string/three"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnSqrt"
+        app:layout_constraintEnd_toStartOf="@+id/btnMul"
+        app:layout_constraintStart_toEndOf="@+id/btn2"
+        app:layout_constraintTop_toBottomOf="@+id/btn6" />
+
+    <Button
+        android:id="@+id/btnBackspace"
+        style="@style/NaNButton"
+        app:icon="@android:drawable/ic_input_delete"
+        app:iconPadding="32dp"
+        app:iconSize="50dp"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/btnDiv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn9"
+        app:layout_constraintTop_toBottomOf="@+id/btnExp" />
+
+    <Button
+        android:id="@+id/btnDiv"
+        style="@style/NaNButton"
+        android:text="@string/divide"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnMul"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn6"
+        app:layout_constraintTop_toBottomOf="@+id/btnBackspace" />
+
+    <Button
+        android:id="@+id/btnVar"
+        style="@style/NaNButton"
+        android:text="@string/var"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAbs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLeftBracket" />
+
+    <Button
+        android:id="@+id/btnDot"
+        style="@style/NaNButton"
+        android:text="@string/dot"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnLeftBracket"
+        app:layout_constraintEnd_toStartOf="@+id/btn0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+    <Button
+        android:id="@+id/btnLeftBracket"
+        style="@style/NaNButton"
+        android:text="@string/left_bracket"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnVar"
+        app:layout_constraintEnd_toStartOf="@+id/btnRightBracket"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDot" />
+
+    <Button
+        android:id="@+id/btnMul"
+        style="@style/NaNButton"
+        android:text="@string/multiply"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnSub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn3"
+        app:layout_constraintTop_toBottomOf="@+id/btnDiv" />
+
+    <Button
+        android:id="@+id/btnRightBracket"
+        style="@style/NaNButton"
+        android:text="@string/right_bracket"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnAbs"
+        app:layout_constraintEnd_toStartOf="@+id/btnPow"
+        app:layout_constraintStart_toEndOf="@+id/btnLeftBracket"
+        app:layout_constraintTop_toBottomOf="@+id/btn0" />
+
+    <Button
+        android:id="@+id/btnAbs"
+        style="@style/NaNButton"
+        android:text="@string/abs"
+        android:layout_marginEnd="0dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnRightBracket"
+        app:layout_constraintStart_toEndOf="@+id/btnVar"
+        app:layout_constraintTop_toBottomOf="@+id/btnRightBracket" />
+
+    <Button
+        android:id="@+id/btnSqrt"
+        style="@style/NaNButton"
+        android:text="@string/sqrt"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnPow"
+        app:layout_constraintEnd_toStartOf="@+id/btnSub"
+        app:layout_constraintStart_toEndOf="@+id/btn0"
+        app:layout_constraintTop_toBottomOf="@+id/btn3" />
+
+    <Button
+        android:id="@+id/btnPow"
+        style="@style/NaNButton"
+        android:text="@string/power"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintEnd_toStartOf="@+id/btnAdd"
+        app:layout_constraintStart_toEndOf="@+id/btnRightBracket"
+        app:layout_constraintTop_toBottomOf="@+id/btnSqrt" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="#CD4035"
+        android:text="@string/equal"
+        android:textAppearance="@style/CalculatorButtonCaption"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnAbs"
+        app:layout_constraintTop_toBottomOf="@+id/btnPow" />
+
+    <Button
+        android:id="@+id/btnSub"
+        style="@style/NaNButton"
+        android:text="@string/minus"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSqrt"
+        app:layout_constraintTop_toBottomOf="@+id/btnMul" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        style="@style/NaNButton"
+        android:text="@string/plus"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPow"
+        app:layout_constraintTop_toBottomOf="@+id/btnSub" />
+
+    <Button
+        android:id="@+id/btn8"
+        style="@style/NumberButton"
+        android:text="@string/eight"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
+        app:layout_constraintEnd_toStartOf="@+id/btn9"
+        app:layout_constraintStart_toEndOf="@+id/btn7"
+        app:layout_constraintTop_toBottomOf="@+id/btnAcos" />
+
+    <Button
+        android:id="@+id/btn5"
+        style="@style/NumberButton"
+        android:text="@string/five"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn2"
+        app:layout_constraintEnd_toStartOf="@+id/btn6"
+        app:layout_constraintStart_toEndOf="@+id/btn4"
+        app:layout_constraintTop_toBottomOf="@+id/btn8" />
+
+    <Button
+        android:id="@+id/btn2"
+        style="@style/NumberButton"
+        android:text="@string/two"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn0"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@+id/btn5" />
+
+    <Button
+        android:id="@+id/btn0"
+        style="@style/NumberButton"
+        android:text="@string/zero"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnRightBracket"
+        app:layout_constraintEnd_toStartOf="@+id/btnSqrt"
+        app:layout_constraintStart_toEndOf="@+id/btnDot"
+        app:layout_constraintTop_toBottomOf="@+id/btn2" />
+
+    <Button
+        android:id="@+id/btn7"
+        style="@style/NumberButton"
+        android:text="@string/seven"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn4"
+        app:layout_constraintEnd_toStartOf="@+id/btn8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAsin" />
+
+    <Button
+        android:id="@+id/btn4"
+        style="@style/NumberButton"
+        android:text="@string/four"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn1"
+        app:layout_constraintEnd_toStartOf="@+id/btn5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn7" />
+
+    <Button
+        android:id="@+id/btn1"
+        style="@style/NumberButton"
+        android:text="@string/one"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnDot"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn4" />
+
+    <Button
+        android:id="@+id/btnAcos"
+        style="@style/NaNButton"
+        android:text="@string/acos"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn8"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtan"
+        app:layout_constraintStart_toEndOf="@+id/btnAsin"
+        app:layout_constraintTop_toBottomOf="@+id/btnCos" />
+
+    <Button
+        android:id="@+id/btnAtan"
+        style="@style/NaNButton"
+        android:text="@string/atan"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn9"
+        app:layout_constraintEnd_toStartOf="@+id/btnExp"
+        app:layout_constraintStart_toEndOf="@+id/btnAcos"
+        app:layout_constraintTop_toBottomOf="@+id/btnTan" />
+
+    <Button
+        android:id="@+id/btnExp"
+        style="@style/NaNButton"
+        android:text="@string/exp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnBackspace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAtan"
+        app:layout_constraintTop_toBottomOf="@+id/btnLog" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+</androidx.constraintlayout.widget.ConstraintLayout>
